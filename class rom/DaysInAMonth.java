@@ -17,26 +17,48 @@ public class DaysInAMonth
       numberOfDaysInAMonth = 31;
       break;
       case "February":
+      int anActual;
+      double anBisiesto = 0;
+      anActual = Integer.parseInt(JOptionPane.showInputDialog("Enter the current year"));
+      anBisiesto = anActual%4;
+      if (anBisiesto==0)
+      {
+        numberOfDaysInAMonth = 29;
+      }
+      else
       numberOfDaysInAMonth = 28;
       break;
       case "March":
       numberOfDaysInAMonth = 31;
       break;
       case "April":
-      numberOfDaysInAMonth = 28;
+      numberOfDaysInAMonth = 30;
       break;
       case "May":
       numberOfDaysInAMonth = 31;
       break;
       case "June":
-      numberOfDaysInAMonth = 28;
+      numberOfDaysInAMonth = 30;
       break;
       case "July":
       numberOfDaysInAMonth = 31;
       break;
-      case "Agoust":
-      numberOfDaysInAMonth = 28;
+      case "August":
+      numberOfDaysInAMonth = 31;
       break;
-    }
+      case "September":
+      numberOfDaysInAMonth = 30;
+      break;
+      case "October":
+      numberOfDaysInAMonth = 31;
+      break;
+      case "November":
+      numberOfDaysInAMonth = 30;
+      break;
+      case "December":
+      numberOfDaysInAMonth = 31;
+      break;
+    }//end switch
+    JOptionPane.showMessageDialog(null, "The number of days is: " + numberOfDaysInAMonth);
   }
 }

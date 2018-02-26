@@ -28,17 +28,18 @@ public class Contrasena
 
   public String getFuerte()
   {
-    for (int i = 0; i <= contrasena.length(); i++)
+    String fuerte = getContrasena();
+    for (int i = 0; i <= fuerte.length(); i++)
     {
-      if (Integer.valueOf(contrasena.charAt(i)) >= 65 && Integer.valueOf(contrasena.charAt(i)) <=90)
+      if (Integer.parseInt(fuerte.charAt(i)) >= 65 && Integer.parseInt(fuerte.charAt(i)) <=90)
       {
         contadorMayusculas += 1;
       }//end if
-      else if (Integer.valueOf(contrasena.charAt(i)) >= 97 && Integer.valueOf(contrasena.charAt(i)) <=122)
+      else if (Integer.parseInt(fuerte.charAt(i)) >= 97 && Integer.parseInt(fuerte.charAt(i)) <=122)
       {
         contadorMinusculas += 1;
       }
-      else if (Integer.valueOf(contrasena.charAt(i)) >= 48 && Integer.valueOf(contrasena.charAt(i)) <= 53)
+      else if (Integer.parseInt(fuerte.charAt(i)) >= 48 && Integer.parseInt(fuerte.charAt(i)) <= 53)
       {
         contadorNumeros += 1;
       }

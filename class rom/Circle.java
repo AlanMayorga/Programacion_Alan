@@ -9,6 +9,16 @@ public class Circle
   //Properties
   private double radius;
 
+  //Constructor
+  public Circle()
+  {
+  }
+  //Constructor circle overload
+  public Circle(double radius)
+  {
+    this.radius = radius;
+  }
+
   //methods
   public void setRadius(double radius)
   {
@@ -25,8 +35,8 @@ public class Circle
   }
   public static void main(String[] args)
   {
-    Circle circle = new Circle();
-    circle.setRadius(3.14);
-    JOptionPane.showMessageDialog(null, circle.getArea());
+    double radius = Double.parseDouble(JOptionPane.showInputDialog("Enter the radius"));
+    Circle circle = new Circle(radius);
+    JOptionPane.showMessageDialog(null, "The circle's area with a radius of " + circle.getRadius() + " is " + circle.getArea());
   }
 }

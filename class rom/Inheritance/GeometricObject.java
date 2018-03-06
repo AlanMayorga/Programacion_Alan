@@ -4,7 +4,7 @@
 *This is a superclass
 *****************************************************/
 import java.util.Date;
-public class GeometricObject
+public abstract class GeometricObject
 {
   private String color;
   private boolean filled; //rellenado
@@ -43,4 +43,8 @@ public class GeometricObject
   {
     return this.dateCreated;
   }
+
+  //Definir el metodo abstracto que puede utilizar circle o rectangle
+  public abstract double getArea();
+  public abstract double getPerimeter();
 }

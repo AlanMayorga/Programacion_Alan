@@ -9,6 +9,6 @@ public class Salaried extends Employee
   }
    public double getPay()
    {
-     return 0;
+     return this.salary;
    }
 }

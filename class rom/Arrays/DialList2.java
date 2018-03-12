@@ -12,20 +12,24 @@ public class DialList2
     int filledNumbers = 0; //number of phones
     String phoneNum; //an entered phone number
 
-    JOptionPane.showMessageDialog(null, "Enter a phone number ( or press Q to QUIT)");
+    phoneNum = JOptionPane.showInputDialog("Enter a phone number ( or press Q to QUIT)");
 
-    while (!phoneNum.equalsIgnoreCase("q") && filledNumbers < phoneList.length);
+    while (!phoneNum.equalsIgnoreCase("q") && filledNumbers < phoneList.length)
     {
-      if (phoneNum.length() < 1 || phoneNum.length() > 10)
+      if (phoneNum.length() < 10)
       {
         JOptionPane.showMessageDialog(null, "Must enter a valid number (10 characters)");
-      } else {
-        
+      } else
+      {
+          phoneList[filledNumbers] = phoneNum;
+          filledNumbers ++;
       }
+      phoneNum = JOptionPane.showInputDialog("Enter a phone number ( or press Q to QUIT)");
     }
-    for (int i = 0; i < sizeList; i++)
+    JOptionPane.showMessageDialog(null, "Dial List");
+    for (int i = 0; i < filledNumbers; i++)
     {
-      JOptionPane.showMessageDialog(null, "Index " + i + " element number: " + (i+1) + " phone number: " + phoneList[i]);
+      JOptionPane.showMessageDialog(null, (i+1) + " phone " + phoneList[i]);
     }
   }
 }

@@ -33,8 +33,7 @@ public class Bear
 
         case 2:
           int index = Integer.parseInt(JOptionPane.showInputDialog("Index ?"));
-          teddyBearStore.get(index);
-          JOptionPane.showMessageDialog(null, teddyBearStore.get(index));
+          teddyBearStore.get(index).display();
         break;
 
         case 3:

@@ -14,8 +14,8 @@ public class Problem1_4
     radio = sc.nextDouble();
     System.out.println("Ingrese la hipotenusa del triangulo rectangulo");
     hipotenusaTrianguloRectangulo=sc.nextDouble();
-    catetoFlotante = raiz((hipotenusaTrianguloRectangulo*hipotenusaTrianguloRectangulo)-(radio*radio));
-    areaTriangular=2*(radio*catetoFlotante)/2
+    catetoFlotante = math.srq((hipotenusaTrianguloRectangulo*hipotenusaTrianguloRectangulo)-(radio*radio));
+    areaTriangular=2*(radio*catetoFlotante)/2;
     areaCircular=(PI*radio*radio)/2;
     area=areaTriangular+areaCircular;
     System.out.println("El area es: " + area);
